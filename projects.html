@@ -52,12 +52,22 @@
 				text-decoration: none;
 				font-family: cursive;
 			}
-			
+			/*
 			.top-container {
 				background-color: #E4F9F5;
 				position: relative;
 				padding: 30px;
 				height: 180px;
+			}
+			
+			*/
+			
+			.top-container {
+				background-color: #E4F9F5;
+				position: relative;
+				padding: 20px; /* Reduced padding slightly for smaller screens */
+				min-height: 180px; /* Changed from 'height' to 'min-height' */
+				box-sizing: border-box; /* Ensures padding doesn't push width past 100% */
 			}
 			
 			.bottom-container {
@@ -75,26 +85,54 @@
 				font-size:1.1rem;
 			}
 			
-			.img4{
-				height: 100px;
-				width: 100px;
+			/* Base mobile-first styles */
+			/* --- Mobile Default (Screens smaller than 768px) --- */
+
+			.img4 { 
+			  width: 25%; 
+			  height: auto; 
+			  max-width: 100px; 
 			}
 
-			.img5{
-				height:100px;
-				width: 90px;
+			.img5 { 
+			  width: 22.5%; 
+			  height: auto; 
+			  max-width: 90px; 
 			}
-			
-			.top-cloud {
-				position: absolute;
-				right: 220px;
-				top: 100px;
+
+			/* Moves the images into the normal document flow so they slide under the <h2> */
+			.top-cloud, 
+			.bottom-cloud { 
+			  position: static; 
+			  display: block; 
+			  margin: 15px auto; /* Centers the images and adds spacing */
+			  text-align: center;
 			}
-			
-			.bottom-cloud {
+
+
+			/* --- Desktop Optimization (Screens 768px and wider) --- */
+
+			@media (min-width: 768px) { 
+			  .img4 { 
+				width: 100px; 
+			  } 
+			  
+			  .img5 { 
+				width: 90px; 
+			  } 
+			  
+			  /* Restores the absolute positioning for desktop layout */
+			  .top-cloud { 
 				position: absolute;
-				left: 220px;
-				bottom: 40px;
+				right: 220px; 
+				top: 100px; 
+			  } 
+			  
+			  .bottom-cloud { 
+				position: absolute;
+				left: 220px; 
+				bottom: 40px; 
+			  } 
 			}
 		</style>
 	</head>
