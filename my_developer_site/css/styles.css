@@ -117,7 +117,7 @@ img {
 /* --- MOBILE FRIENDLY FIX --- */
 @media (max-width: 768px) {
   /* Hide the absolute clouds completely on mobile to prevent overlaps */
-  .top-cloud, .top-cloud2, .bottom-cloud, .bottom-cloud2 {
+  .top-cloud, .top-cloud2, .bottom-cloud, .bottom-cloud2, .img3, .img4, .img5 {
     display: none;
   }
 
