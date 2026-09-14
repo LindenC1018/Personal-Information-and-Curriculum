@@ -119,6 +119,8 @@ img {
   /* Hide the absolute clouds completely on mobile to prevent overlaps */
   .top-cloud, .top-cloud2, .bottom-cloud, .bottom-cloud2, .img3, .img4, .img5 {
     display: none !important;
+	visibility: hidden !important;
+    opacity: 0 !important;
   }
 
   /* Make the container height flexible so text doesn't overflow */
